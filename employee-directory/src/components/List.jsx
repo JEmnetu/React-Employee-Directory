@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import friends from '../employees.json'
 
 class List extends Component {
     
@@ -7,7 +8,7 @@ class List extends Component {
         let items = ['First', 'second', 'third', 'fourth'];
         return ( <div>
             <ul>
-                {items.map((item, i)=> <li key={i}>{item}</li>)}
+                {friends.map((friend, i)=> <li key={i}>{friend.name.title + ` ` + friend.name.last}</li>)}
             </ul>
         </div> );
     }
