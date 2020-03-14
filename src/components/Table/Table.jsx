@@ -15,7 +15,7 @@ class Table extends Component {
     render() { 
         
         
-        return ( <div className="wrapper container-fluid" style={{backgroundColor:'teal', height:"100%"}}>{this.props.children}
+        return ( <div className="wrapper container-fluid" style={{backgroundColor:'teal', height:"100vh"}}>{this.props.children}
           
         </div> );
     }

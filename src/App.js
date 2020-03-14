@@ -4,6 +4,7 @@ import './App.css';
 import Table from './components/Table/Table';
 import Card from './components/Card/Card';
 import Title from './components/Title/Title';
+
 import friends from './employees.json';
 
 
@@ -58,6 +59,16 @@ class App extends Component {
       })
     })
   }
+
+  filterNames = () => {
+    this.setState({
+      data:this.state.data.filter(item =>{
+        if(item.dob.age <= 29){
+          return item;
+        }
+      })
+    })
+  };
   
 
   
@@ -69,7 +80,9 @@ class App extends Component {
       sortLastName={this.sortLastName}
       sortAge={this.sortAge}
       sortCity={this.sortCity}
+      filterDem={this.filterNames}
       >JakeTech Employee Roster
+      
       
       </Title>
       
